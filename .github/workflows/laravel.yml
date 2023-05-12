@@ -34,7 +34,7 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           script: |
             cd /var/www/html
-            sudo https://github.com/Srk7995/githubaction.git
+            git clone https://github.com/Srk7995/githubaction.git
             cd githubaction
             composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
             sudo chown -R www-data:www-data storage/
