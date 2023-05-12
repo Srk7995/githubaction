@@ -30,7 +30,7 @@ jobs:
         with:
           host: 3.25.179.252
           username: ubuntu
-          password: ${{ secrets.SERVER_PASSWORD1 }}
+          key: ${{ secrets.SERVER_PASSWORD1 }}
           port: 22
           script: |
             cd /var/www/html
