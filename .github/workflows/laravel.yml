@@ -29,7 +29,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: 3.25.179.252
-          username: ${{ secrets.SERVER_USERNAME }}
+          username: root
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 22
           script: |
