@@ -36,7 +36,7 @@ jobs:
             cd /var/www/html
             sudo git clone https://github.com/Srk7995/githubaction.git
             cd githubaction
-            composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
+            sudo composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
             sudo chown -R www-data:www-data storage/
             sudo chmod -R 755 storage/
             sudo chown -R www-data:www-data bootstrap/cache/
