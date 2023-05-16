@@ -24,7 +24,6 @@ jobs:
           sudo apt-get install php8.2-zip
           sudo apt-get install php8.2-mysql
           composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
-
       - name: Deploy to server
         uses: appleboy/ssh-action@master
         with:
@@ -38,7 +37,3 @@ jobs:
             cd githubaction
             sudo composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
             sudo chown -R www-data:www-data storage/
-            sudo chmod -R 755 storage/
-            sudo chown -R www-data:www-data bootstrap/cache/
-            sudo chmod -R 755 bootstrap/cache/
-            php artisan migrate --force
